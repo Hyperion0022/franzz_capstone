@@ -1,0 +1,14 @@
+Array
+(
+    [first_name] => Aileen joyce
+    [last_name] => mateo
+    [dob] => 2025-03-31
+    [username] => franz022
+    [email] => francismateo711@gmail.com
+    [password] => gg12345678
+    [confirm_password] => gg12345678
+)
+quiz_title is missing
+questions is missing
+time_limit is missing or invalid
+Invalid JSON format in questions

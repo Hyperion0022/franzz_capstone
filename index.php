@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <title>Welcome to QuizApp</title>
+    
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-grad-school.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+<!--
+    
+TemplateMo 557 Grad School
+
+https://templatemo.com/tm-557-grad-school
+
+-->
+  </head>
+
+<body>
+
+   
+  <!--header-->
+  <header class="main-header clearfix" role="header">
+    <div class="logo">
+      <a href="#"><em>LEARN</em> SPHERE</a>
+    </div>
+    <a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a>
+    <nav id="menu" class="main-nav" role="navigation">
+      <ul class="main-menu">
+        <li><a href="#section1">Home</a></li>
+        <li class="has-submenu"><a href="#section2">About Us</a>
+          <ul class="sub-menu">
+            <li><a href="#section2">Who we are?</a></li>
+            <li><a href="#section3">What we do?</a></li>
+            <li><a href="#section3">How it works?</a></li>
+          </ul>
+        </li>
+        <!-- <li><a href="#section5">Video</a></li> -->
+        <li><a href="#section6">Contact</a></li>
+        <li><a href="#section4">Features</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ***** Main Banner Area Start ***** -->
+  <section class="section main-banner" id="top" data-section="section1">
+      <video autoplay muted loop id="bg-video">
+          <source src="assets/images/course-video.mp4" type="video/mp4" />
+      </video>
+
+      <div class="video-overlay header-text">
+          <div class="caption">
+              <h6>Unleash the magic of learning with our enchanting quiz platform!</h6>
+              <h2><em>LEARN</em>SPHERE</h2>
+              <div class="main-button">
+  <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#roleModal">
+    Start Quiz
+  </button>
+</div>
+
+          </div>
+      </div>
+  </section>
+<!-- Role Selection Modal -->
+<div class="modal fade" id="roleModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content p-3">
+      <div class="modal-header">
+        <h5 class="modal-title">Choose Your Role</h5>
+        <!-- Custom Close Button -->
+        <button type="button" class="close-btn" data-bs-dismiss="modal" aria-label="Close">
+          &times;
+        </button>
+      </div>
+      <div class="modal-body">
+        <div id="roleSelection">
+          <div class="row">
+            <div class="col-6">
+              <div class="role-btn" onclick="showOptions('teacher')">
+                <i class="bi bi-laptop role-icon"></i>
+                <h5>Teacher</h5>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="role-btn" onclick="showOptions('student')">
+                <i class="bi bi-mortarboard role-icon"></i>
+                <h5>Student</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="authOptions" class="hidden mt-4">
+          <div class="card p-3 text-center" style="background:rgb(44, 48, 98); color: white;">
+            <h5 id="roleText"></h5>
+            <p>Log in if you already have an account, or Register if you're new.</p>
+            <div class="d-flex justify-content-around auth-buttons">
+              <a id="loginLink" href="#" class="btn btn-primary">Log In</a>
+              <a id="registerLink" href="#" class="btn btn-success">Register</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<style>
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 32px; /* Mas malaki */
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  padding: 5px 15px; /* Para hindi masikip */
+  line-height: 1;
+}
+
+.close-btn:hover {
+  color: black;
+}
+
+.btn-primary {
+  background-color: rgb(237, 154, 1); /* Yellow */
+  border: none;
+  transition: all 0.3s ease-in-out;
+  color: white; /* White text */
+  font-weight: bold;
+}
+
+.btn-primary:hover {
+  background-color: rgb(207, 141, 0); /* Darker yellow for hover */
+  color: white;
+}
+
+.btn-primary:focus, 
+.btn-primary:active {
+  background-color: rgb(255, 166, 0) !important;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  color: white;
+}
+
+    .modal-content {
+      border-radius: 12px;
+      background: url('coming-soon-bg copy.jpg') center/cover;
+      color: #ffffff;
+      box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+    }
+
+    .role-btn {
+      border: none;
+      background:rgb(235, 149, 0);
+      text-align: center;
+      width: 100%;
+      padding: 1rem;
+      transition: background 0.3s ease;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+      color: #fff;
+    }
+
+    .role-btn:hover {
+      background:rgb(184, 132, 0);
+      cursor: pointer;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .auth-buttons .btn {
+      width: 48%;
+      border-radius: 8px;
+    }
+    </style>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  function showOptions(role) {
+    document.getElementById('authOptions').classList.remove('hidden');
+    document.getElementById('roleSelection').classList.add('hidden');
+
+    if (role === 'teacher') {
+      document.getElementById('roleText').innerText = "You're a Teacher!";
+      document.getElementById('loginLink').href = "login-teacher.php";
+      document.getElementById('registerLink').href = "register_teacher.php";
+    } else {
+      document.getElementById('roleText').innerText = "You're a Student!";
+      document.getElementById('loginLink').href = "login-student.php";
+      document.getElementById('registerLink').href = "register_student.php";
+    }
+  }
+
+  // Reset modal when closed
+  document.getElementById('roleModal').addEventListener('hidden.bs.modal', function () {
+    document.getElementById('authOptions').classList.add('hidden');
+    document.getElementById('roleSelection').classList.remove('hidden');
+  });
+</script>
+<section class="section courses" data-section="section4">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-heading">
+            <h2>QUIZ FEATURES</h2>
+          </div>
+        </div>
+        <div class="owl-carousel owl-theme">
+          <div class="item">
+            <img src="assets/images/courses-01.jpg" alt="Feature #1">
+            <div class="down-content">
+              <h4>Interactive Questions</h4>
+              <p>Engage with dynamic, thought-provoking questions designed to test your knowledge.</p>
+            </div>
+          </div>
+          <div class="item">
+            <img src="assets/images/courses-02.jpg" alt="Feature #2">
+            <div class="down-content">
+              <h4>Timed Quizzes</h4>
+              <p>Challenge yourself with quizzes that have time limits to enhance your quick-thinking skills.</p>
+            </div>
+          </div>
+          <div class="item">
+            <img src="assets/images/courses-03.jpg" alt="Feature #3">
+            <div class="down-content">
+              <h4>Leaderboard</h4>
+              <p>Compete with others and see where you rank on the quiz leaderboard.</p>
+            </div>
+          </div>
+          <div class="item">
+            <img src="assets/images/courses-04.jpg" alt="Feature #4">
+            <div class="down-content">
+              <h4>Instant Feedback</h4>
+              <p>Receive immediate feedback on your answers to improve learning and retention.</p>
+           
+            </div>
+          </div>
+          <div class="item">
+            <img src="assets/images/courses-05.jpg" alt="Feature #5">
+            <div class="down-content">
+              <h4>Multiple Quiz Categories</h4>
+              <p>Choose from a variety of quiz topics to test different areas of knowledge.</p>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+]
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <p><i class="fa fa-copyright"></i> Copyright 2025 by LearnSphere  
+         
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/lightbox.js"></script>
+    <script src="assets/js/tabs.js"></script>
+    <script src="assets/js/video.js"></script>
+    <script src="assets/js/slick-slider.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script>
+        //according to loftblog tut
+        $('.nav li:first').addClass('active');
+
+        var showSection = function showSection(section, isAnimate) {
+          var
+          direction = section.replace(/#/, ''),
+          reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+          reqSectionPos = reqSection.offset().top - 0;
+
+          if (isAnimate) {
+            $('body, html').animate({
+              scrollTop: reqSectionPos },
+            800);
+          } else {
+            $('body, html').scrollTop(reqSectionPos);
+          }
+
+        };
+
+        var checkSection = function checkSection() {
+          $('.section').each(function () {
+            var
+            $this = $(this),
+            topEdge = $this.offset().top - 80,
+            bottomEdge = topEdge + $this.height(),
+            wScroll = $(window).scrollTop();
+            if (topEdge < wScroll && bottomEdge > wScroll) {
+              var
+              currentId = $this.data('section'),
+              reqLink = $('a').filter('[href*=\\#' + currentId + ']');
+              reqLink.closest('li').addClass('active').
+              siblings().removeClass('active');
+            }
+          });
+        };
+
+        $('.main-menu, .scroll-to-section').on('click', 'a', function (e) {
+          if($(e.target).hasClass('external')) {
+            return;
+          }
+          e.preventDefault();
+          $('#menu').removeClass('active');
+          showSection($(this).attr('href'), true);
+        });
+
+        $(window).scroll(function () {
+          checkSection();
+        });
+
+    </script>
+</body>
+</html>
